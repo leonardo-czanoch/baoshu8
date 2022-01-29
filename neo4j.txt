@@ -1,0 +1,21 @@
+CREATE (l:User {name: "leo007", email: "22558643@qq.com", password: "liucan007", coins: 0, contributions: 0})
+CREATE (c:User {name: "catherine005", email: "1169148500@qq.com", password: "catherine007", coins: 0, contributions: 0})
+CREATE (p:User {name: "phoebe005", email: "phoebe007@qq.com", password: "phoebe007", coins: 0, contributions: 0})
+CREATE (y:User {name: "yan005", email: "yan007@abc.com", password: "yan007", coins: 0, contributions: 0})
+
+CREATE (r1:Resource {no: 517145, section: "t260", link: "http://www.baoshu8.com/r517145", subject: "[韩国电影][好人][百度网盘][MKV/3.67G][韩语中字][1080P]", tar: "开放主题", content:"导演: 정욱\n主演: 金太勋 / 李孝制 / 金賢貞 / 金钟求 / 朴彩恩\n类型: 悬疑\n制片国家/地区: 韩国\n语言: 韩语\n上映日期: 2020-10-27(釜山电影节)\n片长: 101分钟\n又名: Good Person\n\n电影《好人》讲述高中教师庆锡（演员金太勋饰）和被指认为班内盗窃案嫌犯的学生世益（演员李孝制饰）之间的故事。\n"})
+CREATE (r2:Resource {no: 517139, section: "t260", link: "http://www.baoshu8.com/r517139", subject: "[国产电影][苍狼之特战突击][百度网盘][MP4/1.62G][国语中字][4K] ", tar: "热门主题", content:"图片:1.jpg\n\n\n导演: 王利兴\n主演: 吴承轩 / 赵飞燕 / 任天野 / 张晞临 / 杜玉明\n类型: 动作 / 战争\n制片国家/地区: 中国大陆\n语言: 汉语普通话\n上映日期: 2021-09-19(中国大陆)\n片长: 85分钟\n\n苍狼之特战突击的剧情简介 · · · · · ·\n　　本片依据热播电视剧《苍狼》改编，讲述了爱国青年秦枫和恋人赵岚在国家动荡的大背景下，走上了不同的人生道路。他们在各自的战斗历程中，历尽艰险和苦痛，但善良的本性和保家卫国的初衷却始终没有动摇。随着解放战争开始，以秦枫为代表的的热血特战队“苍狼”，假扮身份执行营救戴师长的任务，在山匪与敌人的双重威胁下，历经凶险。然而令人意想不到的是，在与山匪斗智斗勇的时候，却重逢旧爱。\n"})
+
+CREATE (c1:Comment {content: "抱书吧百度云资源真不错,分享的资源又快又完整,继续保持啦!"})
+CREATE (c2:Comment {content: "抱书吧百度云资源真不错,分享的资源又快又完整,继续保持啦!"})
+CREATE (c3:Comment {content: "抱书吧百度云资源真不错,分享的资源又快又完整,继续保持啦!"})
+CREATE (c4:Comment {content: "抱书吧百度云资源真不错,分享的资源又快又完整,继续保持啦!"})
+
+
+CREATE (l)-[:POST {time: date("2021-09-27")}]->(r1)
+CREATE (c)-[:POST {time: date("2021-09-28")}]->(r2)
+
+CREATE (l)-[:SUBMIT {time: localdatetime("2021-09-27T11:36:29")}]->(c1)
+CREATE (c)-[:SUBMIT {time: localdatetime("2021-09-28T11:36:29")}]->(c2)
+CREATE (p)-[:SUBMIT {time: localdatetime("2021-09-29T11:36:29")}]->(c3)
+CREATE (y)-[:SUBMIT {time: localdatetime("2021-09-30T11:36:29")}]->(c4)
